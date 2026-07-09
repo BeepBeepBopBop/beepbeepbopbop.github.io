@@ -1,0 +1,607 @@
+/* ==========================================================================
+   Papillote — base styles
+   ========================================================================== */
+
+:root {
+  --color-primary: #f7b58e;
+  --color-secondary: #728c66;
+  --color-text: #4e4e4e;
+  --color-accent: #f1914e;
+  --color-cream: #f7f3e8;
+  --color-tan: #efe7d0;
+  --color-white: #ffffff;
+
+  --font-heading: "Poppins", sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --container-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Prevent long text from forcing grid/flex tracks wider than their container */
+.hero > *,
+.pricing > *,
+.how > *,
+.tarifs > *,
+.bio > *,
+.contact > *,
+.site-footer .container > * {
+  min-width: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-cream);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--color-secondary);
+  margin: 0 0 0.6em;
+  line-height: 1.25;
+}
+
+h1 { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 600; }
+h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 600; }
+h3 { font-size: 1.25rem; font-weight: 600; }
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  padding-left: 1.2em;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 64px 0;
+}
+
+.eyebrow {
+  color: var(--color-accent);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+/* Buttons
+   ========================================================================== */
+
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: 2px;
+  padding: 18px 32px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.btn-light {
+  background: var(--color-cream);
+  color: var(--color-accent);
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--color-cream);
+  border-bottom: 1px solid var(--color-tan);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.site-header__logo img {
+  height: 48px;
+  width: auto;
+}
+
+.site-header__title {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.site-header__title a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+}
+
+.hero__text {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  padding: 72px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__text h1 {
+  color: var(--color-white);
+}
+
+.hero__text ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.15rem;
+}
+
+.hero__text li {
+  margin-bottom: 0.6em;
+}
+
+.hero__photo {
+  position: relative;
+  min-height: 360px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.hero__photo .btn {
+  position: relative;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero__text {
+    padding: 48px 24px;
+  }
+  .hero__photo {
+    min-height: 240px;
+  }
+}
+
+/* ==========================================================================
+   Icon steps (hero row + comment ca fonctionne)
+   ========================================================================== */
+
+.icon-steps {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 48px 24px 32px;
+}
+
+.icon-steps__item img {
+  height: 56px;
+  width: auto;
+  margin: 0 auto 12px;
+}
+
+.icon-steps__item p {
+  margin: 0;
+  color: var(--color-text);
+}
+
+.section-cta {
+  text-align: center;
+  padding-bottom: 48px;
+}
+
+/* ==========================================================================
+   Pricing banner + stats
+   ========================================================================== */
+
+.pricing-banner {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 20px 24px;
+  text-align: center;
+}
+
+.pricing-banner strong {
+  font-size: 1.25rem;
+}
+
+.pricing-note {
+  text-align: center;
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  padding: 12px 24px 0;
+}
+
+.pricing {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  gap: 32px;
+  align-items: stretch;
+  padding: 48px 0;
+}
+
+.pricing__stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.pricing__stats .value {
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 600;
+  display: block;
+}
+
+.pricing__photo {
+  border-radius: 8px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.pricing__benefits {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border-radius: 8px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  gap: 1em;
+}
+
+@media (max-width: 900px) {
+  .pricing {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Concept
+   ========================================================================== */
+
+.concept__lead {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* En option cards */
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 2em;
+}
+
+.options__card {
+  background: var(--color-tan);
+  border-radius: 8px;
+  padding: 28px;
+}
+
+.options__card h3 {
+  color: var(--color-secondary);
+}
+
+@media (max-width: 780px) {
+  .options {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Comment ca fonctionne
+   ========================================================================== */
+
+.how {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.how__photos {
+  display: grid;
+  gap: 16px;
+}
+
+.how__photos img {
+  border-radius: 8px;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.how__content {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 8px;
+  padding: 40px;
+}
+
+.how__content h2 {
+  color: var(--color-white);
+  text-align: center;
+}
+
+.how__step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 1.6em;
+}
+
+.how__step img {
+  height: 40px;
+  width: 40px;
+  flex: none;
+}
+
+.how__step p {
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .how {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Tarifs / credit d'impot
+   ========================================================================== */
+
+.tarifs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.tarifs h2 {
+  color: var(--color-accent);
+}
+
+@media (max-width: 860px) {
+  .tarifs {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Qui suis-je
+   ========================================================================== */
+
+.bio {
+  background: var(--color-tan);
+  border-radius: 8px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.bio__photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1.5em;
+}
+
+.bio__heading {
+  color: var(--color-accent);
+}
+
+.bio__dishes {
+  display: grid;
+  gap: 16px;
+}
+
+.bio__dishes img {
+  border-radius: 8px;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+@media (max-width: 860px) {
+  .bio {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.contact h1 {
+  color: var(--color-secondary);
+}
+
+.contact__email {
+  font-size: 1.3rem;
+  display: inline-block;
+  margin-bottom: 0.8em;
+}
+
+.contact dt {
+  color: var(--color-secondary);
+  font-weight: 600;
+  margin-top: 1em;
+}
+
+.contact dd {
+  margin: 0;
+}
+
+.contact__photo {
+  border-radius: 8px;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+@media (max-width: 860px) {
+  .contact {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+  background: var(--color-tan);
+  padding: 48px 0;
+}
+
+.site-footer .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.site-footer__brand {
+  text-align: center;
+}
+
+.site-footer__brand img {
+  height: 64px;
+  margin: 0 auto 12px;
+}
+
+.site-footer__nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5em;
+  text-align: center;
+}
+
+.site-footer__nav a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+.site-footer__aside {
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 1em;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.social-icons svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.site-footer__aside img {
+  margin: 1.5em auto 0;
+  max-width: 240px;
+}
+
+@media (max-width: 700px) {
+  .site-footer .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Mentions legales
+   ========================================================================== */
+
+.legal h2 {
+  color: var(--color-secondary);
+}
+
+.legal h6 {
+  color: var(--color-secondary);
+  font-size: 1rem;
+  margin-top: 1.5em;
+}

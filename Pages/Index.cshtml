@@ -1,0 +1,193 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Accueil";
+    ViewData["Description"] = "Chef à domicile pour les repas du quotidien à Toulouse et environs : vos plats de la semaine cuisinés chez vous par un pro en 1/2 journée";
+}
+
+<section class="hero">
+    <div class="hero__text">
+        <h1>Un chef à domicile pour vos plats de la semaine à Toulouse</h1>
+        <ul>
+            <li>Batchcooking à domicile</li>
+            <li>Menus conçus sur mesure</li>
+            <li>Cuisine saine et gourmande</li>
+            <li>Le fait maison au prix de l'industriel</li>
+        </ul>
+    </div>
+    <div class="hero__photo" style="background-image:url('/images/hero-food.png')">
+        <a class="btn btn-light" href="#contact">Ça m'intéresse</a>
+    </div>
+</section>
+
+<div class="icon-steps container">
+    <div class="icon-steps__item">
+        <img src="~/images/icon-courses.png" alt="" width="512" height="512" />
+        <p>Lucie s'occupe des courses</p>
+    </div>
+    <div class="icon-steps__item">
+        <img src="~/images/icon-cuisine.png" alt="" width="512" height="512" />
+        <p>Elle cuisine chez vous 1/2 journée</p>
+    </div>
+    <div class="icon-steps__item">
+        <img src="~/images/icon-repas.png" alt="" width="512" height="512" />
+        <p>Mangez quand vous voulez</p>
+    </div>
+</div>
+
+<div class="section-cta">
+    <a class="btn btn-primary" href="#concept">En savoir plus</a>
+</div>
+
+<div class="pricing-banner">
+    <strong>50% moins cher grâce au crédit d'impôt*</strong>
+</div>
+<p class="pricing-note">Avance immédiate bientôt disponible</p>
+
+<div class="container pricing">
+    <div class="pricing__stats">
+        <div>
+            <span class="value">140&euro;</span>
+            <p>par prestation en moyenne</p>
+        </div>
+        <div>
+            <span class="value">6</span>
+            <p>repas pour</p>
+        </div>
+        <div>
+            <span class="value">4</span>
+            <p>personnes soit</p>
+        </div>
+        <div>
+            <span class="value">6&euro;</span>
+            <p>le plat</p>
+        </div>
+    </div>
+    <img class="pricing__photo" src="~/images/pricing-food.png" alt="Papillote de plats préparés" />
+    <div class="pricing__benefits">
+        <p>Gagner des heures et la sérénité</p>
+        <p>Cuisine saine et goûteuse</p>
+        <p>Produits frais et de saison</p>
+        <p>3 fois moins cher qu'au restaurant</p>
+    </div>
+</div>
+
+<section id="concept" class="section container">
+    <h1>Le concept</h1>
+    <div class="concept__lead">
+        <p class="eyebrow">Chef à domicile des plats de la semaine à Toulouse</p>
+        <p>S'inspirant de la méthode du batchcooking (littéralement « cuisiner en lots », c'est-à-dire préparer en une seule fois plusieurs plats pour les jours suivants), Papillote est un service de chef à domicile des plats du quotidien.</p>
+        <p>Il s'adresse à toutes les personnes soucieuses de bien manger et manquant de temps, de motivation ou de savoir-faire pour cuisiner. Papillote s'adapte à tout le monde : familles, sportives et sportifs, personnes suivant des régimes spécifiques ou ayant des allergies particulières, repas à emporter&hellip;</p>
+        <p>Je suis Lucie, la chef, cuisinière à toutes heures et étudiante en diététique. Forte de ma connaissance de la nutrition et de la cuisine notamment végétale, je vous invite sur la piste d'une alimentation saine sans sensation de restriction.</p>
+    </div>
+
+    <h2 style="text-align:center; margin-top:2em;">En option</h2>
+    <div class="options">
+        <div class="options__card">
+            <h3>Batch avec moi</h3>
+            <p>Si vous le souhaitez, nous pouvons cuisiner ensemble. C'est l'occasion d'apprendre par la pratique et de partager un moment chaleureux. Discutons-en !</p>
+        </div>
+        <div class="options__card">
+            <h3>Précisions nutritionnelles</h3>
+            <p>A la demande des personnes ayant des objectifs nutritionnels particuliers, je peux réaliser un menu de grande précision et fournir le tableau de ration renseignant les calories, macronutriments et micronutriments ciblés.</p>
+        </div>
+        <div class="options__card">
+            <h3>Evénements</h3>
+            <p>En-dehors de vos repas de tous les jours, je peux aussi apparaître dans votre cuisine en amont d'un événement particulier : apéro dinatoire, repas de famille, goûter d'anniversaire, dîner en amoureux ou autre.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section container how">
+    <div class="how__photos">
+        <img src="~/images/dish-courges.png" alt="Petites courges farcies" />
+        <img src="~/images/dish-curry.png" alt="Curry thaï vert" />
+        <img src="~/images/dish-creme.png" alt="Crème dessert coco cacahuète" />
+    </div>
+    <div class="how__content">
+        <h2>Comment ça fonctionne ?</h2>
+        <div class="how__step">
+            <img src="~/images/icon-contact.png" alt="" />
+            <p>Nous prenons contact pour discuter de votre situation, vos goûts, vos habitudes et de vos objectifs nutritionnels éventuels</p>
+        </div>
+        <div class="how__step">
+            <img src="~/images/icon-menu.png" alt="" />
+            <p>Je vous propose une sélection de plats sur mesure parmi laquelle vous choisissez votre menu de la semaine (entre 3 et 8 plats différents)</p>
+        </div>
+        <div class="how__step">
+            <img src="~/images/icon-panier.png" alt="" />
+            <p>Les courses sont incluses : je privilégie des produits frais, de saison, issus d'une agriculture durable</p>
+        </div>
+        <div class="how__step">
+            <img src="~/images/icon-chef.png" alt="" />
+            <p>Je viens chez vous sur rendez-vous et cuisine avec ou sans vous durant 2 à 5 heures</p>
+        </div>
+        <div class="how__step">
+            <img src="~/images/icon-assiette.png" alt="" />
+            <p>Vous retrouvez votre cuisine aussi propre que vous l'avez laissée et votre réfrigérateur rempli. Mangez quand vous voulez !</p>
+        </div>
+    </div>
+</section>
+
+<section class="section container tarifs">
+    <div>
+        <h2>Tarifs</h2>
+        <p>Tous les plats et prestations sont réalisés sur mesure. Les tarifs sont très variables : ils dépendent du nombre de plats et de personnes à table, du coût des ingrédients et du temps passé dans votre cuisine. Ainsi, une papillote contenant des plats à partager est moins onéreuse qu'une papillote de plats individuels.</p>
+        <p>Pour cela, j'encourage les personnes seules qui souhaiteraient faire des économies à commander des plats de plusieurs portions. Vous pouvez les emporter au travail, les congeler pour plus tard, les partager avec un invité ou vous régaler plusieurs fois dans la semaine ! Les plats végétariens sont également moins coûteux.</p>
+        <p>En moyenne, comptez entre 3&euro; et 7&euro; par assiette après crédit d'impôt soit 90&euro; pour une papillote de 5 plats pour 3 personnes (180&euro; sans crédit d'impôt).</p>
+    </div>
+    <div>
+        <h2>Crédit d'impôt</h2>
+        <p>Papillote relève des Services à la Personne mis en place par l'Urssaf et la Direction générale des Finances publiques.</p>
+        <p>A ce titre, vous pouvez bénéficier d'un crédit d'impôt sur le revenu égal à 50% des dépenses engagées pour les prestations de services à la personne dans la limite d'un plafond variant entre 12 000 et 20 000&euro; par an selon votre situation.</p>
+        <p>L'avance immédiate, service optionnel et gratuit, permet la déduction de 50% dès le paiement de la facture.</p>
+        <ul>
+            <li>Papillote crée votre compte URSSAF que vous activez</li>
+            <li>Papillote vous adresse les demandes de paiement, vous avez 48 heures pour les valider</li>
+        </ul>
+        <p>En cas de questions, Papillote reste votre interlocuteur privilégié.</p>
+        <a class="btn btn-primary" href="https://www.urssaf.fr/accueil/services/services-particuliers/service-avance-immediate.html" target="_blank" rel="noopener">Plus d'infos</a>
+    </div>
+</section>
+
+<section class="section container">
+    <div class="bio">
+        <div>
+            <h2 class="bio__heading">Qui suis-je ?</h2>
+            <img class="bio__photo" src="~/images/lucie.jpg" alt="Lucie, chef à domicile" width="180" height="180" />
+            <p>Je suis <strong>Lucie</strong>, toulousaine de 29 ans passionnée de cuisine et <strong>étudiante en diététique</strong>. D'origine bretonne, occitane, méditerranéenne, j'ai étendu le carnet de recettes familiales en allant puiser dans la gastronomie indienne, japonaise, iranienne, thaïlandaise, sénégalaise&hellip; Je m'intéresse notamment à l'alimentation végétale et fermentée. Je <strong>cuisine de tout et j'adore expérimenter</strong>.</p>
+            <p>Au-delà de la gastronomie, j'ai à cœur de <strong>prendre soin</strong> de celles et ceux qui m'entourent et de leur <strong>offrir de la joie qui se goûte</strong>. Cuisiner pour vous me permet d'<strong>allier repas, santé et plaisir</strong>. Je cuisine uniquement avec des produits bruts, sans additifs, au maximum choisis parmi une offre locale et issus d'une agriculture durable.</p>
+            <p>Mes études de nutrition et ma curiosité culinaire me permettent d'<strong>appréhender les besoins nutritionnels de chacun et de vous offrir une cuisine saine et gourmande en slalomant large autour des sacrifices</strong>.</p>
+        </div>
+        <div class="bio__dishes">
+            <img src="~/images/dish-salade.png" alt="Salade kale et falafels" />
+            <img src="~/images/dish-lasagne.png" alt="Lasagnes à l'aubergine" />
+            <img src="~/images/dish-tian.png" alt="Tian provençal" />
+            <img src="~/images/dish-buddha.png" alt="Buddha bowl" />
+        </div>
+    </div>
+</section>
+
+<div class="section-cta">
+    <a class="btn btn-primary" href="#contact">Commander une Papillote</a>
+</div>
+
+<section id="contact" class="section container contact">
+    <div>
+        <h1>Contact</h1>
+        <p><strong>Lucie Muzart</strong></p>
+        <p><a class="contact__email" href="mailto:contact@@papillote.cooking">contact@@papillote.cooking</a></p>
+        <p>Je n'ai pour le moment plus de place pour des prestations hebdomadaires. Si vous souhaitez que je vous inscrive sur liste d'attente, vous pouvez toutefois m'écrire un message en me précisant :</p>
+        <dl>
+            <dt>Repas</dt>
+            <dd>nombre de personnes à table, nombre de repas souhaités, régularité</dd>
+            <dt>Régime alimentaire</dt>
+            <dd>vos préférences, objectifs, vos allergies éventuelles</dd>
+            <dt>En pratique</dt>
+            <dd>votre lieu de résidence, le matériel à disposition (espace, vaisselle et électroménager à disposition) et les possibilités horaires</dd>
+        </dl>
+        <p>Ces informations me permettront de revenir vers vous dès que possible.</p>
+        <a class="btn btn-primary" href="mailto:contact@@papillote.cooking">Envoyer un e-mail</a>
+    </div>
+    <img class="contact__photo" src="~/images/contact-food.png" alt="" />
+</section>
