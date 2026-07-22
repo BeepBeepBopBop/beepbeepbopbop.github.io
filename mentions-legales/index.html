@@ -1,15 +1,37 @@
-@page "/mentions-legales"
-@model MentionsLegalesModel
-@{
-    ViewData["Title"] = "Mentions légales";
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mentions légales - Papillote</title>
+    <link rel="icon" href="/images/favicon-32.png" sizes="32x32" />
+    <link rel="icon" href="/images/favicon-192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/images/favicon-180.png" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" />
+
+    <link rel="stylesheet" href="/css/papillote.css" />
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <a href="/" class="site-header__logo">
+            <img src="/images/logo.png" alt="Papillote" width="442" height="442" />
+        </a>
+        <h2 class="site-header__title"><a href="/">Papillote</a></h2>
+    </div>
+</header>
+
+<main id="content">
 <section class="section container legal">
     <h2>Mentions légales</h2>
 
     <h6><strong>1. Présentation du site.</strong></h6>
     <h6>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site www.papillote.cooking l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi :</h6>
-    <p>Propriétaire : Papillote – RCS 930 547 187 – 1 rue Adonis, 31200 Toulouse, France<br>Créateur : Papillote<br>Responsable publication : Papillote – <a href="mailto:contact@@papillote.cooking">contact@@papillote.cooking</a><br>Le responsable publication est une personne physique ou une personne morale.<br>Hébergeur : OVH</p>
+    <p>Propriétaire : Papillote – RCS 930 547 187 – 1 rue Adonis, 31200 Toulouse, France<br>Créateur : Papillote<br>Responsable publication : Papillote – <a href="mailto:contact@papillote.cooking">contact@papillote.cooking</a><br>Le responsable publication est une personne physique ou une personne morale.<br>Hébergeur : OVH</p>
 
     <h6><strong>2. Conditions générales d'utilisation du site et des services proposés.</strong></h6>
     <h6>L'utilisation du site www.papillote.cooking implique l'acceptation pleine et entière des conditions générales d'utilisation ci-après décrites. Ces conditions d'utilisation sont susceptibles d'être modifiées ou complétées à tout moment, les utilisateurs du site www.papillote.cooking sont donc invités à les consulter de manière régulière.</h6>
@@ -44,3 +66,32 @@
     <h6><strong>8. Droit applicable et attribution de juridiction.</strong></h6>
     <p>Tout litige en relation avec l'utilisation du site www.papillote.cooking est soumis au droit français.</p>
 </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="site-footer__brand">
+            <img src="/images/logo.png" alt="Papillote" width="120" height="120" />
+        </div>
+        <div class="site-footer__aside">
+            <nav class="site-footer__nav" aria-label="Menu">
+                <ul><li><a href="/mentions-legales/" aria-current="page">Mentions légales</a></li></ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61566266138841&amp;locale=fr_FR" target="_blank" rel="noopener" aria-label="Facebook">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/papillote_toulouse/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                </a>
+            </div>
+            <p>Toulouse</p>
+            <p>&copy; <span id="copyright-year"></span> Papillote — Tous droits réservés</p>
+            <img src="/images/service-a-la-personne.png" alt="Service à la personne" width="240" height="177" />
+        </div>
+    </div>
+</footer>
+
+<script src="/js/papillote.js"></script>
+</body>
+</html>

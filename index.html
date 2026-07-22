@@ -1,10 +1,32 @@
-@page
-@model IndexModel
-@{
-    ViewData["Title"] = "Accueil";
-    ViewData["Description"] = "Chef à domicile pour les repas du quotidien à Toulouse et environs : vos plats de la semaine cuisinés chez vous par un pro en 1/2 journée";
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil - Papillote</title>
+    <meta name="description" content="Chef à domicile pour les repas du quotidien à Toulouse et environs : vos plats de la semaine cuisinés chez vous par un pro en 1/2 journée" />
+    <link rel="icon" href="/images/favicon-32.png" sizes="32x32" />
+    <link rel="icon" href="/images/favicon-192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/images/favicon-180.png" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" />
+
+    <link rel="stylesheet" href="/css/papillote.css" />
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <a href="/" class="site-header__logo">
+            <img src="/images/logo.png" alt="Papillote" width="442" height="442" />
+        </a>
+        <h2 class="site-header__title"><a href="/">Papillote</a></h2>
+    </div>
+</header>
+
+<main id="content">
 <section class="hero">
     <div class="hero__text">
         <h1>Un chef à domicile pour vos plats de la semaine à Toulouse</h1>
@@ -22,15 +44,15 @@
 
 <div class="icon-steps container">
     <div class="icon-steps__item">
-        <img src="~/images/icon-courses.png" alt="" width="512" height="512" />
+        <img src="/images/icon-courses.png" alt="" width="512" height="512" />
         <p>Lucie s'occupe des courses</p>
     </div>
     <div class="icon-steps__item">
-        <img src="~/images/icon-cuisine.png" alt="" width="512" height="512" />
+        <img src="/images/icon-cuisine.png" alt="" width="512" height="512" />
         <p>Elle cuisine chez vous 1/2 journée</p>
     </div>
     <div class="icon-steps__item">
-        <img src="~/images/icon-repas.png" alt="" width="512" height="512" />
+        <img src="/images/icon-repas.png" alt="" width="512" height="512" />
         <p>Mangez quand vous voulez</p>
     </div>
 </div>
@@ -63,7 +85,7 @@
             <p>le plat</p>
         </div>
     </div>
-    <img class="pricing__photo" src="~/images/pricing-food.png" alt="Papillote de plats préparés" />
+    <img class="pricing__photo" src="/images/pricing-food.png" alt="Papillote de plats préparés" />
     <div class="pricing__benefits">
         <p>Gagner des heures et la sérénité</p>
         <p>Cuisine saine et goûteuse</p>
@@ -100,30 +122,30 @@
 
 <section class="section container how">
     <div class="how__photos">
-        <img src="~/images/dish-courges.png" alt="Petites courges farcies" />
-        <img src="~/images/dish-curry.png" alt="Curry thaï vert" />
-        <img src="~/images/dish-creme.png" alt="Crème dessert coco cacahuète" />
+        <img src="/images/dish-courges.png" alt="Petites courges farcies" />
+        <img src="/images/dish-curry.png" alt="Curry thaï vert" />
+        <img src="/images/dish-creme.png" alt="Crème dessert coco cacahuète" />
     </div>
     <div class="how__content">
         <h2>Comment ça fonctionne ?</h2>
         <div class="how__step">
-            <img src="~/images/icon-contact.png" alt="" />
+            <img src="/images/icon-contact.png" alt="" />
             <p>Nous prenons contact pour discuter de votre situation, vos goûts, vos habitudes et de vos objectifs nutritionnels éventuels</p>
         </div>
         <div class="how__step">
-            <img src="~/images/icon-menu.png" alt="" />
+            <img src="/images/icon-menu.png" alt="" />
             <p>Je vous propose une sélection de plats sur mesure parmi laquelle vous choisissez votre menu de la semaine (entre 3 et 8 plats différents)</p>
         </div>
         <div class="how__step">
-            <img src="~/images/icon-panier.png" alt="" />
+            <img src="/images/icon-panier.png" alt="" />
             <p>Les courses sont incluses : je privilégie des produits frais, de saison, issus d'une agriculture durable</p>
         </div>
         <div class="how__step">
-            <img src="~/images/icon-chef.png" alt="" />
+            <img src="/images/icon-chef.png" alt="" />
             <p>Je viens chez vous sur rendez-vous et cuisine avec ou sans vous durant 2 à 5 heures</p>
         </div>
         <div class="how__step">
-            <img src="~/images/icon-assiette.png" alt="" />
+            <img src="/images/icon-assiette.png" alt="" />
             <p>Vous retrouvez votre cuisine aussi propre que vous l'avez laissée et votre réfrigérateur rempli. Mangez quand vous voulez !</p>
         </div>
     </div>
@@ -154,16 +176,16 @@
     <div class="bio">
         <div>
             <h2 class="bio__heading">Qui suis-je ?</h2>
-            <img class="bio__photo" src="~/images/lucie.jpg" alt="Lucie, chef à domicile" width="180" height="180" />
+            <img class="bio__photo" src="/images/lucie.jpg" alt="Lucie, chef à domicile" width="180" height="180" />
             <p>Je suis <strong>Lucie</strong>, toulousaine de 29 ans passionnée de cuisine et <strong>étudiante en diététique</strong>. D'origine bretonne, occitane, méditerranéenne, j'ai étendu le carnet de recettes familiales en allant puiser dans la gastronomie indienne, japonaise, iranienne, thaïlandaise, sénégalaise&hellip; Je m'intéresse notamment à l'alimentation végétale et fermentée. Je <strong>cuisine de tout et j'adore expérimenter</strong>.</p>
             <p>Au-delà de la gastronomie, j'ai à cœur de <strong>prendre soin</strong> de celles et ceux qui m'entourent et de leur <strong>offrir de la joie qui se goûte</strong>. Cuisiner pour vous me permet d'<strong>allier repas, santé et plaisir</strong>. Je cuisine uniquement avec des produits bruts, sans additifs, au maximum choisis parmi une offre locale et issus d'une agriculture durable.</p>
             <p>Mes études de nutrition et ma curiosité culinaire me permettent d'<strong>appréhender les besoins nutritionnels de chacun et de vous offrir une cuisine saine et gourmande en slalomant large autour des sacrifices</strong>.</p>
         </div>
         <div class="bio__dishes">
-            <img src="~/images/dish-salade.png" alt="Salade kale et falafels" />
-            <img src="~/images/dish-lasagne.png" alt="Lasagnes à l'aubergine" />
-            <img src="~/images/dish-tian.png" alt="Tian provençal" />
-            <img src="~/images/dish-buddha.png" alt="Buddha bowl" />
+            <img src="/images/dish-salade.png" alt="Salade kale et falafels" />
+            <img src="/images/dish-lasagne.png" alt="Lasagnes à l'aubergine" />
+            <img src="/images/dish-tian.png" alt="Tian provençal" />
+            <img src="/images/dish-buddha.png" alt="Buddha bowl" />
         </div>
     </div>
 </section>
@@ -176,7 +198,7 @@
     <div>
         <h1>Contact</h1>
         <p><strong>Lucie Muzart</strong></p>
-        <p><a class="contact__email" href="mailto:contact@@papillote.cooking">contact@@papillote.cooking</a></p>
+        <p><a class="contact__email" href="mailto:contact@papillote.cooking">contact@papillote.cooking</a></p>
         <p>Je n'ai pour le moment plus de place pour des prestations hebdomadaires. Si vous souhaitez que je vous inscrive sur liste d'attente, vous pouvez toutefois m'écrire un message en me précisant :</p>
         <dl>
             <dt>Repas</dt>
@@ -187,7 +209,36 @@
             <dd>votre lieu de résidence, le matériel à disposition (espace, vaisselle et électroménager à disposition) et les possibilités horaires</dd>
         </dl>
         <p>Ces informations me permettront de revenir vers vous dès que possible.</p>
-        <a class="btn btn-primary" href="mailto:contact@@papillote.cooking">Envoyer un e-mail</a>
+        <a class="btn btn-primary" href="mailto:contact@papillote.cooking">Envoyer un e-mail</a>
     </div>
-    <img class="contact__photo" src="~/images/contact-food.png" alt="" />
+    <img class="contact__photo" src="/images/contact-food.png" alt="" />
 </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="site-footer__brand">
+            <img src="/images/logo.png" alt="Papillote" width="120" height="120" />
+        </div>
+        <div class="site-footer__aside">
+            <nav class="site-footer__nav" aria-label="Menu">
+                <ul><li><a href="/mentions-legales/">Mentions légales</a></li></ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61566266138841&amp;locale=fr_FR" target="_blank" rel="noopener" aria-label="Facebook">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/papillote_toulouse/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                </a>
+            </div>
+            <p>Toulouse</p>
+            <p>&copy; <span id="copyright-year"></span> Papillote — Tous droits réservés</p>
+            <img src="/images/service-a-la-personne.png" alt="Service à la personne" width="240" height="177" />
+        </div>
+    </div>
+</footer>
+
+<script src="/js/papillote.js"></script>
+</body>
+</html>

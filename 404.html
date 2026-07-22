@@ -1,56 +1,46 @@
-@{
-    var currentPage = ViewContext.RouteData.Values["page"]?.ToString();
-    Func<string, string, string, string> navLi = (pageKey, href, label) =>
-    {
-        var isActive = string.Equals(currentPage, pageKey, StringComparison.OrdinalIgnoreCase);
-        var aria = isActive ? " aria-current=\"page\"" : "";
-        return $"<li><a href=\"{href}\"{aria}>{label}</a></li>";
-    };
-}
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Papillote</title>
-    @if (ViewData["Description"] != null)
-    {
-        <meta name="description" content="@ViewData["Description"]" />
-    }
-    <link rel="icon" href="~/images/favicon-32.png" sizes="32x32" />
-    <link rel="icon" href="~/images/favicon-192.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="~/images/favicon-180.png" />
+    <title>Page introuvable - Papillote</title>
+    <link rel="icon" href="/images/favicon-32.png" sizes="32x32" />
+    <link rel="icon" href="/images/favicon-192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/images/favicon-180.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" />
 
-    <link rel="stylesheet" href="~/css/papillote.css" />
-    @await RenderSectionAsync("Styles", required: false)
+    <link rel="stylesheet" href="/css/papillote.css" />
 </head>
 <body>
 
 <header class="site-header">
     <div class="container">
         <a href="/" class="site-header__logo">
-            <img src="~/images/logo.png" alt="Papillote" width="442" height="442" />
+            <img src="/images/logo.png" alt="Papillote" width="442" height="442" />
         </a>
         <h2 class="site-header__title"><a href="/">Papillote</a></h2>
     </div>
 </header>
 
 <main id="content">
-@RenderBody()
+<section class="section container">
+    <h1>Page introuvable</h1>
+    <p>Cette page n'existe pas ou plus.</p>
+    <a class="btn btn-primary" href="/">Retour à l'accueil</a>
+</section>
 </main>
 
 <footer class="site-footer">
     <div class="container">
         <div class="site-footer__brand">
-            <img src="~/images/logo.png" alt="Papillote" width="120" height="120" />
+            <img src="/images/logo.png" alt="Papillote" width="120" height="120" />
         </div>
         <div class="site-footer__aside">
             <nav class="site-footer__nav" aria-label="Menu">
-                <ul>@Html.Raw(navLi("/MentionsLegales", "/mentions-legales", "Mentions légales"))</ul>
+                <ul><li><a href="/mentions-legales/">Mentions légales</a></li></ul>
             </nav>
             <div class="social-icons">
                 <a href="https://www.facebook.com/profile.php?id=61566266138841&amp;locale=fr_FR" target="_blank" rel="noopener" aria-label="Facebook">
@@ -62,12 +52,11 @@
             </div>
             <p>Toulouse</p>
             <p>&copy; <span id="copyright-year"></span> Papillote — Tous droits réservés</p>
-            <img src="~/images/service-a-la-personne.png" alt="Service à la personne" width="240" height="177" />
+            <img src="/images/service-a-la-personne.png" alt="Service à la personne" width="240" height="177" />
         </div>
     </div>
 </footer>
 
-<script src="~/js/papillote.js"></script>
-@await RenderSectionAsync("Scripts", required: false)
+<script src="/js/papillote.js"></script>
 </body>
 </html>
